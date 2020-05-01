@@ -52,9 +52,44 @@
   
   .carousel-caption {
     left         : 8%;
-    width        : 100%;
+    width        : 84%;
     vertical-align: middle;
     padding-bottom: 20vh;
+  }
+
+  @media (min-width: 576px) {
+    .carousel-caption {
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    .btn-cta {
+      margin-top: 20px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .carousel-caption {
+      left         : 8%;
+      width        : 84%;
+      vertical-align: middle;
+      padding-bottom: 20vh;
+    }
+
+    .btn-cta {
+      margin-top: 0px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .carousel-caption {
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    .btn-cta {
+      margin-top: 20px;
+    }
   }
   
   .navbar {
