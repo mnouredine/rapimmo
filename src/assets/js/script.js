@@ -18,8 +18,6 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         scroll = $(window).scrollTop();
-        console.log('scroll: ' + scroll);
-        console.log('fiff: ' + ($(document).height() - $('#footer').height()));
         if (scroll > 100) {
             $('.navbar.fixed-top').addClass('scrolling');
         } else {

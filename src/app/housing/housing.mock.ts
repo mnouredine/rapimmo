@@ -1,0 +1,7 @@
+import { IHousing } from './housing.model';
+
+export const housingMock: IHousing[] = [
+    { "id": 1, "title": "Maison \u00e0 vendre au plateau", "description": "Get vector icons and social logos on your website with Font Awesome, the web\u0027s most popular icon set and toolkit.", "price": 25000000, "surface": 400, "unit": "m2", "bedrooms": "3", "rooms": "5", "furnished": true, "garage": true, "available": true, "status": "NONE", "bathrooms": "3", "address": "Plateau maurice de lens", "latlng": null, "type": { "id": 1, "label": "Maison", "description": null }, "createdAt": null }, 
+    { "id": 2, "title": "Appartement meubl\u00e9", "description": "Random text", "price": 12000000, "surface": 600, "unit": "m2", "bedrooms": "2", "rooms": "2", "furnished": true, "garage": true, "available": true, "status": "AVAILABLE", "bathrooms": "2", "address": "Niamey", "latlng": null, "type": { "id": 1, "label": "Maison", "description": null }, "createdAt": null, "updatedAt": null }, 
+    { "id": 3, "title": "Appartement meubl\u00e9 grand standing", "description": "Simplicity yields productivity, and that\u2019s why many developers have brought DigitalOcean into the workplace.", "price": 12000000, "surface": 150000, "unit": "m2", "bedrooms": "2", "rooms": "1", "furnished": true, "garage": true, "available": true, "status": "NONE", "bathrooms": "2", "address": "Dar es Salam, Nouveau pav\u00e9", "latlng": null, "type": { "id": 3, "label": "Appartement", "description": null }, "createdAt": null, "updatedAt": null }
+]

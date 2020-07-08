@@ -1,0 +1,96 @@
+<app-navbar [opac]="true"></app-navbar>
+<!-- Page Content -->
+<section class="py-4 content">
+    <div class="container">
+        <h2 class="font-weight-bold">Recherches</h2>
+        <!-- <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The images in this snippet are from <a href="https://unsplash.com">Unsplash</a>!</p> -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <!-- <input class="material" placeholder="Tous" type="text" required> -->
+                <select class="material mb-3" id="type">
+                    <option>Je cherche</option>
+                    <option>Une maison</option>
+                    <option>Un terrain</option>
+                    <option>Un Appartement</option>
+                    <option>Un kiosque</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <!-- <input class="material" placeholder="Tous" type="text" required> -->
+                <select class="material mb-3" id="offer">
+                    <option>A Louer</option>
+                    <option>A vendre</option>
+                    <option>Pour un troc</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <!-- <input class="material" placeholder="Tous" type="text" required> -->
+                <select class="material mb-3" id="location">
+                    <option>Aux alentours de</option>
+                    <option>Niamey</option>
+                    <option>Tillabery</option>
+                    <option>Tahoua</option>
+                    <option>Maradi</option>
+                    <option>Zinder</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-1">
+                <button type="button" routerLink="/" class="btn btn-default btn-lg submit-search"><i
+                        class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <div class="row">
+            <ng-container *ngIf="lds">
+                <div class="lds-parent">
+                    <div class="lds-spinner">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngFor="let housing of housings">
+                <div class="col-12 padding lib-item" data-category="view"
+                    [routerLink]="['/housing', housing.id, 'view']">
+                    <div class="lib-panel">
+                        <div class="row box-shadow border-radius-left border-radius-right">
+                            <div class="col-md-4 no-padding lib-img-show border-radius-left"
+                                style="background-image: url(http://lorempixel.com/850/450/?random=123);"></div>
+                            <div class="col-md-8 no-padding border-radius-right">
+                                <div class="lib-row lib-type">
+                                    <small>{{ housing.type.label }}</small>
+                                </div>
+                                <div class="lib-row lib-header">
+                                    <h4>{{ housing.title }}</h4>
+                                    <h5 class="no-padding no-margin">{{ housing.price }} FCFA</h5>
+                                    <div class="lib-header-seperator"></div>
+                                </div>
+                                <div class="lib-row lib-desc">
+                                    {{ housing.description }}
+                                </div>
+                                <div class="lib-row lib-features">
+                                    <p>
+                                        <i class="fa fa-map-marker"></i> {{ housing.address }} |
+                                        <i class="fa fa-square"></i> {{ housing.surface }} {{ housing.unit }} |
+                                        <i class="fa fa-bath"></i> {{ housing.bathrooms }} |
+                                        <i class="fa fa-bed"></i> {{ housing.bedrooms }} |
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>
